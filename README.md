@@ -28,6 +28,10 @@ and start the TCP client connecting to `localhost`, e.g., `iperf -c -p 22222`.
 
 * does not multiplex TCP connections which means that applications using multiple TCP connections will probably not function properly
 
+## Our Papers
+
+* Milan Stute, David Kreitschmann, and Matthias Hollick. **One Billion Apples’ Secret Sauce: Recipe for the *Apple Wireless Direct Link* Ad hoc Protocol.** In *The 24th Annual International Conference on Mobile Computing and Networking (MobiCom ’18)*, October–November 2018, New Delhi, India. [DOI](https://doi.org/10.1145/3241539.3241566).
+
 ## Contact
 
 * **Milan Stute** ([email](mailto:mstute@seemoo.tu-darmstadt.de), [web](https://seemoo.de/mstute))
