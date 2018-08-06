@@ -1,6 +1,10 @@
 # proxAWDL
 
-Tunnels a regular TCP connection (e.g., `iperf`) through an AWDL link by exploiting the [NetService](https://developer.apple.com/documentation/foundation/netservice) API. Workaround because Apple prevents regular sockets from listening or connecting to `awdl0`.
+Tunnels a regular TCP connection (e.g., `iperf`) through an AWDL link by exploiting the [NetService](https://developer.apple.com/documentation/foundation/netservice) API. ~~Workaround because Apple prevents regular sockets from listening or connecting to `awdl0`.~~ As an alternative, there is a special XNU socket option [`SO_RECV_ANYIF`](https://opensource.apple.com/source/xnu/xnu-4570.41.2/bsd/sys/socket.h) to allow sending/receiving via AWDL:
+
+```c
+#define SO_RECV_ANYIF 0x1104 /* unrestricted inbound processing */
+```
 
 ## Usage
 
